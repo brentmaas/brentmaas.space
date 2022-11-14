@@ -1,0 +1,21 @@
+body {
+    background: #001342;
+}
+
+p {
+    color: #ffffff;
+    font-size: 16pt;
+}
+
+p.title {
+    font-size: 64pt;
+    font-weight: 800;
+}
+
+a:link {
+    color: #00ffff;
+}
+
+a:visited, a:hover, a:active {
+    color: #ff00ff;
+}
