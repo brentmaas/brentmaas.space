@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+    <head>
+        {% if title is defined %}
+        <title>{{ title }}</title>
+        {% else %}
+        <title>brentmaas.space</title>
+        {% endif %}
+        <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+        <link rel="icon" type="image/png", href="{{url_for('static', filename='images/favicon.png')}}">
+        <script type="text/javascript" src="{{url_for('static', filename='script/navbar.js')}}"></script>
+    </head>
+    <body onload="setNavbar()">
+        <div id="navbar-expanded" class="navbar navbar-expanded" hidden>
+            <button onClick="toggleNavbar()" class="img"><img src="{{url_for('static', filename='images/navbar-toggle.png')}}" class="navbar-toggle"></button>
+            {% for navitem in navitems %}
+                <a href="{{navitem['url']}}" class="navitem">
+                    <div class="navitem">
+                        <center>
+                            {% if request.endpoint is not none and navitem["url"] == url_for(request.endpoint, **request.view_args) %}
+                                <h1 class="navitem-selected">{{navitem["name"]}}</h1>
+                            {% else %}
+                                <h1>{{navitem["name"]}}</h1>
+                            {% endif %}
+                        </center>
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+        <div id="navbar-contracted" class="navbar navbar-contracted" hidden>
+            <button onClick="toggleNavbar()" class="img"><img src="{{url_for('static', filename='images/navbar-toggle.png')}}"></button>
+        </div>
+        <div id="content" class="content content-contracted">
+            {% block content %}{% endblock %}
+        </div>
+    </body>
+</html>

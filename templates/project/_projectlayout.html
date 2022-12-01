@@ -1,0 +1,15 @@
+{% set title = project["name"] %}
+
+{% extends "_layout.html" %}
+
+{% block content %}
+
+<h1 class="title">{{project["name"]}}</h1>
+
+{% if "github" in project %}
+    <a href="{{project['github']}}" target="_blank"><img src="{{url_for('static', filename='images/github-button.png')}}" class="project-button"></a>
+{% endif %}
+
+{% block projectcontent %}{% endblock %}
+
+{% endblock %}

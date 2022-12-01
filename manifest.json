@@ -1,0 +1,30 @@
+{
+    "navitems": [
+        {
+            "name": "Home",
+            "url": "/"
+        },
+        {
+            "name": "Projects",
+            "url": "/project/"
+        },
+        {
+            "name": "Contact",
+            "url": "/contact/"
+        }
+    ],
+    "projects": {
+        "air": {
+            "name": "AIR",
+            "github": "https://github.com/brentmaas/air"
+        },
+        "hci": {
+            "name": "High contrast imaging",
+            "github": "https://github.com/brentmaas/HighContrastImaging"
+        },
+        "brentmaas.space": {
+            "name": "Brentmaas.space",
+            "github": "https://github.com/brentmaas/brentmaas.space"
+        }
+    }
+}

@@ -1,15 +1,21 @@
+:root {
+    --content-margin-left: 50px;
+    --navbar-width: 250px;
+    --navbar-toggle-size: 64px;
+}
+
 body {
     background: #001342;
+    font-family: Helvetica;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #ffffff;
 }
 
 p {
     color: #ffffff;
     font-size: 16pt;
-}
-
-p.title {
-    font-size: 64pt;
-    font-weight: 800;
 }
 
 a:link {
@@ -18,4 +24,97 @@ a:link {
 
 a:visited, a:hover, a:active {
     color: #ff00ff;
+}
+
+button.img {
+    background: none;
+    border: none;
+}
+
+div.navbar {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+}
+
+div.navbar-expanded {
+    width: var(--navbar-width);
+    height: 100vh;
+    background: #000a21;
+}
+
+div.navbar-contracted {
+    width: fit-content;
+    height: fit-content;
+}
+
+img.navbar-toggle {
+    width: var(--navbar-toggle-size);
+    height: var(--navbar-toggle-size);
+}
+
+div.navitem {
+    width: auto;
+    height: auto;
+    display: block;
+}
+
+h1.navitem-selected {
+    text-decoration: underline;
+}
+
+a:link.navitem, a:visited.navitem, a:hover.navitem, a:active.navitem {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+h1.title {
+    font-size: 64pt;
+    font-weight: 800;
+}
+
+p.subtitle {
+    font-size: 24pt;
+    font-weight: 600;
+    margin-top: 64pt;
+}
+
+div.content {
+    width: auto;
+    height: auto;
+    margin-left: var(--content-margin-left);
+    margin-top: var(--navbar-toggle-size);
+}
+
+div.content-contracted {
+    margin-left: calc(var(--navbar-width) + var(--content-margin-left)) !important;
+}
+
+span.secret {
+    border-bottom: 1px dotted #ffffff;
+}
+
+span.email {
+    font-family: 'Courier New', monospace;
+}
+
+div.projects {
+    display: grid;
+    width: auto;
+    gap: 64pt;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+div.projects > a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+}
+
+div.project {
+    display: block;
+}
+
+img.project-button {
+    height: 32pt;
 }

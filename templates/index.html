@@ -1,16 +1,15 @@
-<!doctype html>
-<html>
-    <head>
-        <title>Under construction</title>
-        <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
-        <link rel="icon" type="image/png", href="{{url_for('static', filename='images/favicon.png')}}">
-    </head>
-    <body>
-        <center>
-            <p class="title">Under construction</p>
-            <p>This site is currently under construction and will eventually start featuring a couple of astronomical projects.</p>
-            <p>Please check back later in December or early January.</p>
-            <p>For now, some projects can also be found on <a href="https://github.com/brentmaas">GitHub</a>.</p>
-        </center>
-    </body>
-</html>
+{% set title = "Under construction" %}
+
+{% extends "_layout.html" %}
+
+{% block content %}
+
+<h1 class="title">Under construction</h1>
+<p>This site is currently under construction and will eventually start featuring a couple of astronomical projects.</p>
+<p>Content on these projects will be added and expanded upon throughout December and January.</p>
+
+<p class="subtitle">Cookies and tracking and such</p>
+<p>No data is being obtained in any way, shape, or form. Consequently, no personal data is being processed either.</p>
+<p>While cookies themselves aren't used, this site does use JavaScript's <code>sessionStorage</code> for UI functionality. Any data stored here should be cleared when you close the page.</p>
+
+{% endblock %}
