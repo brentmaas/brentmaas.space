@@ -14,6 +14,11 @@
             <div class="project">
                 <center>
                     <p class="subtitle">{{projects[project]["name"]}}</p>
+                    {% set img = url_for("static", filename="images/project/"+project+"/thumb.png") %}
+                    {% if not os.path.exists("./" + img) %}
+                        {% set img = url_for("static", filename="images/project/default/thumb.png") %}
+                    {% endif %}
+                    <img src="{{img}}" class="project-thumb">
                 </center>
             </div>
         </a>

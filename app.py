@@ -1,5 +1,6 @@
 import flask
 import json
+import os
 
 app = flask.Flask(__name__)
 navitems = {}
@@ -15,7 +16,7 @@ def init():
 
 @app.context_processor
 def context_processor():
-    return {"navitems": navitems, "projects": projects}
+    return {"os": os, "navitems": navitems, "projects": projects}
 
 @app.errorhandler(404)
 def notfound(error):

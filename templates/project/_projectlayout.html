@@ -7,7 +7,13 @@
 <h1 class="title">{{project["name"]}}</h1>
 
 {% if "github" in project %}
-    <a href="{{project['github']}}" target="_blank"><img src="{{url_for('static', filename='images/github-button.png')}}" class="project-button"></a>
+    <a href="{{project['github']}}" target="_blank"><img src="{{url_for('static', filename='images/project/github-button.png')}}" class="project-button"></a>
+{% endif %}
+{% if "wip" in project and project["wip"] %}
+    <img src="{{url_for('static', filename='images/project/wip.png')}}" class="project-button">
+{% endif %}
+{% if "planned" in project and project["planned"] %}
+    <img src="{{url_for('static', filename='images/project/planned.png')}}" class="project-button">
 {% endif %}
 
 {% block projectcontent %}{% endblock %}

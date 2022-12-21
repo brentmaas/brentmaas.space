@@ -16,15 +16,18 @@
     "projects": {
         "air": {
             "name": "AIR",
-            "github": "https://github.com/brentmaas/air"
+            "github": "https://github.com/brentmaas/air",
+            "wip": true
         },
         "hci": {
             "name": "High contrast imaging",
-            "github": "https://github.com/brentmaas/HighContrastImaging"
+            "github": "https://github.com/brentmaas/HighContrastImaging",
+            "planned": true
         },
         "brentmaas.space": {
             "name": "Brentmaas.space",
-            "github": "https://github.com/brentmaas/brentmaas.space"
+            "github": "https://github.com/brentmaas/brentmaas.space",
+            "wip": true
         }
     }
 }
