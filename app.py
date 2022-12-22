@@ -36,6 +36,7 @@ def projectlist():
 
 @app.route("/project/<string:project>/")
 def project(project):
-    if not project in projects:
+    template = f"project/{project}/index.html"
+    if not project in projects or not os.path.exists(f"./templates/{template}"):
         return flask.abort(404)
-    return flask.render_template(f"project/{project}/index.html", project=projects[project])
+    return flask.render_template(template, project=projects[project])

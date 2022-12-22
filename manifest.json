@@ -19,15 +19,31 @@
             "github": "https://github.com/brentmaas/air",
             "wip": true
         },
+        "brentmaas.space": {
+            "name": "Brentmaas.space",
+            "github": "https://github.com/brentmaas/brentmaas.space",
+            "wip": true
+        },
         "hci": {
             "name": "High contrast imaging",
             "github": "https://github.com/brentmaas/HighContrastImaging",
             "planned": true
         },
-        "brentmaas.space": {
-            "name": "Brentmaas.space",
-            "github": "https://github.com/brentmaas/brentmaas.space",
-            "wip": true
+        "exosurvey": {
+            "name": "Exoplanet survey",
+            "planned": true
+        },
+        "grrenderer": {
+            "name": "GR renderer",
+            "planned": true
+        },
+        "galsim": {
+            "name": "Galaxy simulation",
+            "planned": true
+        },
+        "sfsim": {
+            "name": "Star formation simulation",
+            "planned": true
         }
     }
 }
